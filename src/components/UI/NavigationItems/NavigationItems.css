@@ -1,0 +1,15 @@
+div
+{
+    height:100%;
+    text-align: center;
+    justify-items: center;
+}
+div p{
+    height:100%;
+ 
+    font-weight: bold;
+    /* color:white !important; */
+    font-size:18px;
+    /* padding:18px; */
+
+}

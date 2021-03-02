@@ -1,0 +1,24 @@
+.Toolbar
+{
+    left:0;
+    top:0;
+     width:100%;
+   height:60px;
+    background-color: #ff4e00;
+    /* background-image : linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%); */
+
+    position: fixed;
+
+}
+/*
+device width is y
+min-width: x .. apply css when device width is greater than or equal to the specified value (y>=x)
+max-width:x apply css when device width is less than or equal to the specified value(y<=x)
+*/
+@media(max-width:499px)
+{
+    .Toolbar{
+        /* display:none; */
+
+    }
+}

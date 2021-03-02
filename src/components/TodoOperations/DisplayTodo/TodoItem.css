@@ -1,0 +1,47 @@
+.strikethrough
+{
+    text-decoration: line-through !important;
+}
+.check{
+    position: relative;
+}
+.check::before{
+    font-family: FontAwesome;
+    top:0;
+    left:-5px;
+    padding-right:9px;
+    content: "\f00c"; 
+}
+.times
+{
+    position: relative;
+}
+.times::before{
+    font-family: FontAwesome;
+    top:0;
+    left:-5px;
+    padding-right: 9px;
+    content: "\f00d";
+}
+.redo{
+    position: relative;
+}
+.redo::before{
+    content:"\f01e";
+    font-family: FontAwesome;
+    top:0;
+    left:-5px;
+    padding-right: 9px;
+
+}
+.btnBlue {
+    color: #fff !important;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btnGreen {
+    color: #fff !important;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
