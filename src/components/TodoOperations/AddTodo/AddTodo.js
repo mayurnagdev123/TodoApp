@@ -13,7 +13,7 @@ const clearContents = () =>{
 
 
     return(
-    <div className="container" style={{padding:'20px'}}>
+    <div className="container" style={{padding:'20px',overflowY:'-moz-hidden-unscrollable'}}>
         <form onSubmit={props.saveTodo} >
 <div className="row">
     <div className="col-sm-4">

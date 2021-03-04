@@ -2,6 +2,16 @@
 {
     text-decoration: line-through !important;
 }
+.nameStyle
+{  
+        color:#ff4e00 ;
+        font-size:18px;       
+}
+.descriptionStyle{
+
+    font-size:14px;
+    font-style:italic
+}
 .check{
     position: relative;
 }

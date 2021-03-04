@@ -3,6 +3,7 @@ import AddTodo from '../../components/TodoOperations/AddTodo/AddTodo'
 import DisplayTodos from '../../components/TodoOperations/DisplayTodo/DisplayTodo'
 import {connect} from 'react-redux'
 import * as actionTypes from '../../store/actions/actionTypes'
+import classes from './Todo.css'
 class Todo extends React.Component
 {
     state={
@@ -77,8 +78,8 @@ this.setState((prevState)=>{
         dislayUserMessage="Hi "+loggedInName
 
         return(
-            <div>
-                <span style={{float:'right',paddingRight:'30px',fontWeight:'bold'}}>{dislayUserMessage}</span>
+            <div style={{overflowY:'-moz-hidden-unscrollable'}}>
+                <span style={{float:'right',paddingRight:'30px',marginBottom:'30px',fontWeight:'bold',color:'black'}}>{dislayUserMessage}</span>
             <div style={{marginTop:'90px',backgroundColor:'rgb(0,0,0,0.03)'}} className="container">
             
                <h2>My Todos</h2> 

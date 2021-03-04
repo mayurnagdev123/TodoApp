@@ -1,7 +1,7 @@
 import React from 'react'
 import {Redirect,Router} from 'react-router-dom'
 import WelcomeHeading from './WelcomeHeading'
-import WelcomeForm from './WelcomeForm'
+
 class Welcome extends React.Component
 {
     state={

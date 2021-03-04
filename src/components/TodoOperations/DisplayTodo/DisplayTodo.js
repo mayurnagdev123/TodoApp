@@ -15,6 +15,7 @@ const displayTodo= (props) =>{
         console.log("DisplayTodos",i);
         todosToDisplay.push(<TodoItem key={i} id={i} name={props.todos[i].name}
              description={props.todos[i].description}
+             isComplete={props.todos[i].isComplete}
              onCompletingTodo={props.onCompletingTodo}
              deleteTodo={props.deleteTodo} />);
     }
@@ -34,10 +35,11 @@ todos : state.allTodos
 }
 const mapDispatchToProps = dispatch =>{
     return{
-        onCompletingTodo : (id) =>{
-            console.log("id",id);
-            dispatch({type:actionTypes.COMPLETE_TODO, id: id})
+        onCompletingTodo : (name,description,isComplete) =>{
+            console.log("completing todo with id ",name,description,isComplete);
+            dispatch({type:actionTypes.COMPLETE_TODO, name:name,description:description,isComplete:isComplete})
         }
+    
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(displayTodo);
