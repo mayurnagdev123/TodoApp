@@ -4,7 +4,7 @@ import NavigationItems from '../NavigationItems/NavigationItems'
 const toolbar = () =>{
 
     return(
-        <div className={classes.Toolbar}>
+        <div className={classes.Toolbar} style={{zIndex:'10'}}>
 <NavigationItems />
         </div>
     )

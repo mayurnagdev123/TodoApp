@@ -57,7 +57,7 @@ class todoItem extends Component{
     return(
         <div className="container" style={{padding:'20px'}}>
         <div className="row">
-            <div className="col-sm-8"  style={{backgroundColor:'rgb(0,0,0,0.03)'}}>
+            <div className="col-sm-8"  style={{backgroundColor:'rgba(0,0,0,0.03)'}}>
                 <p id={nameId} className={nameClasses.join(" ")} >{this.props.name}</p>
                 <p id={descriptionId} className={descriptionClasses.join(" ")}>{this.props.description}</p>
             </div>

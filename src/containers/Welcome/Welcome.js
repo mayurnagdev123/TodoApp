@@ -29,7 +29,7 @@ class Welcome extends React.Component
         let displayForm=null;
         if(loggedInName ==null)
         displayForm=(  
-                   <div style={{width:'30%',margin:'auto',marginTop:'150px'}}>
+                   <div style={{width:'35%',margin:'auto',marginTop:'150px'}}>
         <form onSubmit={this.userLogin}>
             <div className="form-group">
                 {/* <label for="name" style={{float:'left'}}>Enter your name to get started</label> */}

@@ -9,7 +9,7 @@ import Todo from './containers/Todo/Todo'
 import Logout from './containers/Logout/Logout'
 class App extends Component {
   render() {
-    console.log(this.props);
+    console.log("coded and designed by mayurnagdev123");
     return (
       <div>
 <Layout>

@@ -3,6 +3,7 @@ import AddTodo from '../../components/TodoOperations/AddTodo/AddTodo'
 import DisplayTodos from '../../components/TodoOperations/DisplayTodo/DisplayTodo'
 import {connect} from 'react-redux'
 import * as actionTypes from '../../store/actions/actionTypes'
+import {Redirect} from 'react-router-dom'
 import classes from './Todo.css'
 class Todo extends React.Component
 {
@@ -72,15 +73,23 @@ this.setState((prevState)=>{
     }
 
     render(){
-        const loggedInName=localStorage.getItem("name");
+
+        let loggedInName=undefined;
+        let redirectIfNotLoggedIn = <Redirect to="/" />
+        try{
+        loggedInName=localStorage.getItem("name");
+        }
+        catch(err){}
+        
         let dislayUserMessage=null;
         if(loggedInName)
         dislayUserMessage="Hi "+loggedInName
 
         return(
             <div style={{overflowY:'-moz-hidden-unscrollable'}}>
+                {loggedInName == undefined || loggedInName.length == 0 ? redirectIfNotLoggedIn : null}
                 <span style={{float:'right',paddingRight:'30px',marginBottom:'30px',fontWeight:'bold',color:'black'}}>{dislayUserMessage}</span>
-            <div style={{marginTop:'90px',backgroundColor:'rgb(0,0,0,0.03)'}} className="container">
+            <div style={{marginTop:'90px',backgroundColor:'rgba(0,0,0,0.03)'}} className="container">
             
                <h2>My Todos</h2> 
                <AddTodo 

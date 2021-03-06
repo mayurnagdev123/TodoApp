@@ -3,7 +3,7 @@ import './AddTodo.css'
 
 const addTodo = (props) =>{
 const clearContents = () =>{
-    console.log("-----------------hi");
+   
    var inputs = document.querySelectorAll("input");
    inputs[0].value="";
    inputs[1].value="";

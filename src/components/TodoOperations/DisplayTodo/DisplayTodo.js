@@ -4,15 +4,11 @@ import TodoItem from './TodoItem'
 import * as actionTypes from  '../../../store/actions/actionTypes'
 const displayTodo= (props) =>{
 
-    // const onCompletingTodo = (props) =>{
-    //     console.log("onCompletingTodo",props);
-    // }
     let todosToDisplay=[];
-    console.log("type="+typeof(todosToDisplay));
+    
     console.log("[DisplayTodo.js]",props.todos);
     for(let i in props.todos)
     {
-        console.log("DisplayTodos",i);
         todosToDisplay.push(<TodoItem key={i} id={i} name={props.todos[i].name}
              description={props.todos[i].description}
              isComplete={props.todos[i].isComplete}

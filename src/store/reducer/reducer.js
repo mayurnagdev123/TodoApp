@@ -20,18 +20,15 @@ const reducer= (state=[],action) =>{
            }
 
         case actionTypes.DELETE_TODO:
-            console.log("[reducer.js]","Delete",state);
+         
             var index=0;
             var copyArray=[...state.allTodos]
             for(var i=0;i<state.allTodos.length;i++)
             {
                 var todo=state.allTodos[i];
-                console.log("element-----------",i,"\t",todo);
                 if(todo.name.localeCompare(action.name)==0 && todo.description.localeCompare(action.description)==0)
                 {
-                    console.log("index to delete=",i);
                     copyArray.splice(i,1);
-                    console.log("updatedArray is ",copyArray);
                     break;
                 }
 
@@ -49,12 +46,9 @@ const reducer= (state=[],action) =>{
                 for(var i=0;i<state.allTodos.length;i++)
                 {
                     var todo=state.allTodos[i];
-                    console.log("element-----------",i,"\t",todo);
                     if(todo.name.localeCompare(action.name)==0 && todo.description.localeCompare(action.description)==0)
                     {
-                        console.log("index to update=",i);
                         copyArray[i].isComplete = !copyArray[i].isComplete;
-                        console.log("updatedArray strikethorugh is ",copyArray);
                         break;
                     }
 
@@ -64,6 +58,15 @@ const reducer= (state=[],action) =>{
                     allTodos:copyArray
                   
                 }
+
+                case actionTypes.LOGOUT_USER :
+                    localStorage.clear();
+                    return{
+                        ...state,
+                        allTodos:[],
+                        counter:0
+                    }
+
 
            default:
                return state;
